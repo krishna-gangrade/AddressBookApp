@@ -12,17 +12,6 @@
       "id": "1"
     },
     {
-      "id": "2",
-      "firstName": "Rahul",
-      "lastName": "Sharma",
-      "address": "Vijay Nagar",
-      "city": "Indore",
-      "state": "MP",
-      "zip": "452010",
-      "phoneNumber": "9123456789",
-      "email": "[rahul@gmail.com](mailto:rahul@gmail.com)"
-    },
-    {
       "id": "3",
       "firstName": "Sneha",
       "lastName": "Patel",
@@ -68,6 +57,17 @@
     },
     {
       "id": "67e8",
+      "firstName": "Amit",
+      "lastName": "Sharma",
+      "address": "",
+      "city": "Mumbai",
+      "state": "MH",
+      "zip": "400001",
+      "phoneNumber": "7777777777",
+      "email": "amit@gmail.com"
+    },
+    {
+      "id": "645a",
       "firstName": "Amit",
       "lastName": "Sharma",
       "address": "",
