@@ -1,4 +1,3 @@
-
 package com.addressbook.service;
 
 import com.addressbook.entity.AddressBook;
@@ -305,5 +304,10 @@ public class AddressBookService {
     public int updateContactCity(String firstName, String lastName, String city) {
 
         return repository.updateContactCity(firstName, lastName, city);
+    }
+    
+    public List<Contact> getContactsByDateRange(String startDate, String endDate) {
+
+        return repository.getContactsByDateRange(startDate, endDate);
     }
 }
