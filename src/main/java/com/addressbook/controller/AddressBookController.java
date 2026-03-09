@@ -1,7 +1,7 @@
 
 package com.addressbook.controller;
 
-import com.addressbook.entity.Contact;
+import com.addressbook.entity.*;
 import com.addressbook.service.AddressBookService;
 import org.springframework.web.bind.annotation.*;
 import java.util.*;
@@ -53,5 +53,17 @@ public class AddressBookController {
     public List<Contact> getContacts(@PathVariable String bookName) {
 
         return service.getContacts(bookName);
+    }
+    
+    @PostMapping("/{name}")
+    public AddressBook createAddressBook(@PathVariable String name) {
+
+        return service.createAddressBook(name);
+    }
+    
+    @GetMapping
+    public Map<String, AddressBook> getAllAddressBooks() {
+
+        return service.getAllAddressBooks();
     }
 }
