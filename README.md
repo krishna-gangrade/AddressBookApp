@@ -409,3 +409,32 @@ Implemented functionality to retrieve Address Book contacts from a **JSON Server
 [feature/UC22-read-entries-from-jsonserver](https://github.com/krishna-gangrade/AddressBookApp/tree/feature/UC22-read-entries-from-jsonserver)
 
 ---
+
+## UC23 – Ability to Add Multiple Entries to Address Book JSON Server and Sync with Application Memory
+
+Implemented functionality to add multiple contacts to the **JSON Server** and synchronize them with the Address Book application's in-memory data.
+
+**Features Implemented**
+
+- Added multiple contact entries to the **JSON Server** using REST APIs.
+- Used **REST Assured** to perform REST API POST requests from **JUnit Test cases**.
+- Sent contact data to the JSON Server endpoint.
+- Updated the **Address Book in-memory list** after successfully adding contacts.
+- Ensured synchronization between **JSON Server data and application memory**.
+
+**Technologies Used**
+
+- **REST Assured** for REST API testing
+- **JUnit** for automated test execution
+- **JSON Server** as a mock backend service
+
+**JSON Server Endpoint**
+
+[JSON Server Endpoint](http://localhost:3000/contacts)
+
+
+**GitHub Branch**
+
+[feature/UC23-add-multiple-entries-jsonserver](https://github.com/krishna-gangrade/AddressBookApp/tree/feature/UC23-add-multiple-entries-jsonserver)
+
+---
