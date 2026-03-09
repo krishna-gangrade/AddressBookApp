@@ -438,3 +438,42 @@ Implemented functionality to add multiple contacts to the **JSON Server** and sy
 [feature/UC23-add-multiple-entries-jsonserver](https://github.com/krishna-gangrade/AddressBookApp/tree/feature/UC23-add-multiple-entries-jsonserver)
 
 ---
+
+## UC24 – Ability to Update Entry in Address Book JSON Server and Sync with Application Memory
+
+Implemented functionality to update existing contact entries in the **JSON Server** and ensure synchronization with the Address Book application's in-memory data.
+
+**Features Implemented**
+
+- Updated contact details stored in the **JSON Server** using REST API calls.
+- Used **REST Assured** to perform REST API **PUT/PATCH requests** from **JUnit Test cases**.
+- Ensured updated contact information is synchronized with the **Address Book in-memory data**.
+- Applied **Open–Closed Principle (OCP)** to allow the Address Book to support multiple data sources without modifying existing code.
+- Supported multiple storage mechanisms including:
+  - **CSV File**
+  - **JSON File**
+  - **Database**
+  - **JSON Server**
+
+**Design Principle Applied**
+
+- Followed the **Open–Closed Principle (OCP)** so that new data sources can be added without modifying the core Address Book logic.
+- Used abstraction to make the system **extensible for additional storage types**.
+
+**Technologies Used**
+
+- **REST Assured** for REST API testing
+- **JUnit** for automated testing
+- **JSON Server** as a mock REST backend
+- **JDBC** for database persistence
+- **OpenCSV** and **GSON** for file-based storage
+
+**JSON Server Endpoint**
+
+[JSON Server Endpoint](http://localhost:3000/contacts)
+
+**GitHub Branch**
+
+[feature/UC24-update-entry-jsonserver](https://github.com/krishna-gangrade/AddressBookApp/tree/feature/UC24-update-entry-jsonserver)
+
+---
