@@ -477,3 +477,31 @@ Implemented functionality to update existing contact entries in the **JSON Serve
 [feature/UC24-update-entry-jsonserver](https://github.com/krishna-gangrade/AddressBookApp/tree/feature/UC24-update-entry-jsonserver)
 
 ---
+
+## UC25 – Ability to Delete Entry in Address Book JSON Server and Sync with Application Memory
+
+Implemented functionality to delete existing contact entries from the **JSON Server** and ensure synchronization with the Address Book application's in-memory data.
+
+**Features Implemented**
+
+- Deleted contact entries from the **JSON Server** using REST API calls.
+- Used **REST Assured** to perform REST API **DELETE requests** from **JUnit Test cases**.
+- Removed the contact from the **JSON Server endpoint**.
+- Updated the **Address Book in-memory data** to reflect the deletion.
+- Ensured synchronization between **JSON Server data and application memory**.
+
+**Technologies Used**
+
+- **REST Assured** for REST API testing  
+- **JUnit** for automated testing  
+- **JSON Server** as a mock REST backend  
+
+**JSON Server Endpoint**
+
+[JSON Server Endpoint](http://localhost:3000/contacts)
+
+**GitHub Branch**
+
+[feature/UC25-delete-entry-jsonserver](https://github.com/krishna-gangrade/AddressBookApp/tree/feature/UC25-delete-entry-jsonserver)
+
+---
