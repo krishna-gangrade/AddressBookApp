@@ -54,6 +54,17 @@
       "zip": "400001",
       "phoneNumber": "7777777777",
       "email": "amit@gmail.com"
+    },
+    {
+      "id": "1bcd",
+      "firstName": "Amit",
+      "lastName": "Sharma",
+      "address": "",
+      "city": "Mumbai",
+      "state": "MH",
+      "zip": "400001",
+      "phoneNumber": "7777777777",
+      "email": "amit@gmail.com"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
