@@ -1,4 +1,3 @@
-
 package com.addressbook;
 
 import org.junit.jupiter.api.Test;
@@ -19,5 +18,17 @@ public class ContactRepositoryTest {
     public void givenDatabase_whenContactsFetched_shouldReturnRecords() {
 
     	assertNotNull(repository.getAllContacts());
+    }
+    
+    @Test
+    public void givenContact_whenCityUpdated_shouldReturnUpdatedRows() {
+
+        int rows = repository.updateContactCity(
+                "Tarus",
+                "Prabhat",
+                "Pune"
+        );
+
+        assertTrue(rows > 0);
     }
 }

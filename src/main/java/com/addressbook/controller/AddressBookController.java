@@ -1,10 +1,9 @@
-
 package com.addressbook.controller;
 
-import com.addressbook.entity.*;
+import com.addressbook.entity.AddressBook;
+import com.addressbook.entity.Contact;
 import com.addressbook.service.AddressBookService;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.*;
 
 @RestController
@@ -33,8 +32,8 @@ public class AddressBookController {
             @RequestBody Contact contact) {
 
         return service.updateContact(bookName, firstName, lastName, contact);
-    }	
-    
+    }
+
     @DeleteMapping("/{bookName}/contacts")
     public String deleteContact(
             @PathVariable String bookName,
@@ -127,6 +126,7 @@ public class AddressBookController {
 
         return service.sortContactsByZip(bookName);
     }
+    
     @PostMapping("/{bookName}/save")
     public String saveContacts(
             @PathVariable String bookName,
@@ -179,5 +179,20 @@ public class AddressBookController {
     public List<Contact> getContactsFromDB() {
 
         return service.getContactsFromDatabase();
+    }
+    
+    @PutMapping("/db/update-city")
+    public String updateContactCity(
+            @RequestParam String firstName,
+            @RequestParam String lastName,
+            @RequestParam String city) {
+
+        int updated = service.updateContactCity(firstName, lastName, city);
+
+        if(updated > 0) {
+            return "Contact updated successfully";
+        }
+
+        return "Contact not found";
     }
 }
