@@ -5,6 +5,7 @@ import com.addressbook.entity.AddressBook;
 import com.addressbook.entity.Contact;
 import org.springframework.stereotype.Service;
 import com.addressbook.util.CSVUtil;
+import com.addressbook.util.JSONUtil;
 import com.addressbook.util.FileUtil;
 
 import java.util.*;
@@ -259,5 +260,21 @@ public class AddressBookService {
     public List<Contact> loadContactsFromCSV(String filePath) {
 
         return CSVUtil.readContactsFromCSV(filePath);
+    }
+    
+    public void saveContactsToJSON(String bookName, String filePath) {
+
+        AddressBook book = addressBooks.get(bookName);
+
+        if(book == null) {
+            return;
+        }
+
+        JSONUtil.writeContactsToJSON(filePath, book.getContacts());
+    }
+
+    public List<Contact> loadContactsFromJSON(String filePath) {
+
+        return JSONUtil.readContactsFromJSON(filePath);
     }
 }
