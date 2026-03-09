@@ -1,4 +1,3 @@
-
 package com.addressbook.controller;
 
 import com.addressbook.entity.Contact;
@@ -31,5 +30,20 @@ public class AddressBookController {
             @RequestBody Contact contact) {
 
         return service.updateContact(bookName, firstName, lastName, contact);
+    }	
+    
+    @DeleteMapping("/{bookName}/contacts")
+    public String deleteContact(
+            @PathVariable String bookName,
+            @RequestParam String firstName,
+            @RequestParam String lastName) {
+
+        boolean deleted = service.deleteContact(bookName, firstName, lastName);
+
+        if (deleted) {
+            return "Contact deleted successfully";
+        }
+
+        return "Contact not found";
     }
 }

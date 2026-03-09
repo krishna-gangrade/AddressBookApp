@@ -1,8 +1,8 @@
+
 package com.addressbook;
 
-import org.junit.jupiter.api.Test;
-
 import com.addressbook.entity.Contact;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
