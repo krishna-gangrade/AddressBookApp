@@ -1,44 +1,60 @@
 {
-"contacts": [
-{
-"id": 1,
-"firstName": "Krishna",
-"lastName": "Gangrade",
-"email": "[krishna.gangrade@example.com](mailto:krishna.gangrade@example.com)",
-"phone": "9876543210",
-"city": "Bhopal"
-},
-{
-"id": 2,
-"firstName": "Rahul",
-"lastName": "Sharma",
-"email": "[rahul.sharma@example.com](mailto:rahul.sharma@example.com)",
-"phone": "9123456780",
-"city": "Indore"
-},
-{
-"id": 3,
-"firstName": "Aman",
-"lastName": "Verma",
-"email": "[aman.verma@example.com](mailto:aman.verma@example.com)",
-"phone": "9988776655",
-"city": "Delhi"
-},
-{
-"id": 4,
-"firstName": "Priya",
-"lastName": "Singh",
-"email": "[priya.singh@example.com](mailto:priya.singh@example.com)",
-"phone": "9090909090",
-"city": "Mumbai"
-},
-{
-"id": 5,
-"firstName": "Sneha",
-"lastName": "Patel",
-"email": "[sneha.patel@example.com](mailto:sneha.patel@example.com)",
-"phone": "9871234567",
-"city": "Ahmedabad"
-}
-]
+  "contacts": [
+    {
+      "firstName": "Krishna",
+      "lastName": "Gangrade",
+      "address": "Arera Colony",
+      "city": "Bhopal",
+      "state": "MP",
+      "zip": "462016",
+      "phoneNumber": "9876543210",
+      "email": "[krishna@gmail.com](mailto:krishna@gmail.com)",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "firstName": "Rahul",
+      "lastName": "Sharma",
+      "address": "Vijay Nagar",
+      "city": "Indore",
+      "state": "MP",
+      "zip": "452010",
+      "phoneNumber": "9123456789",
+      "email": "[rahul@gmail.com](mailto:rahul@gmail.com)"
+    },
+    {
+      "id": "3",
+      "firstName": "Sneha",
+      "lastName": "Patel",
+      "address": "Satellite Road",
+      "city": "Ahmedabad",
+      "state": "GJ",
+      "zip": "380015",
+      "phoneNumber": "9012345678",
+      "email": "[sneha@gmail.com](mailto:sneha@gmail.com)"
+    },
+    {
+      "id": "4",
+      "firstName": "Priya",
+      "lastName": "Singh",
+      "address": "Andheri West",
+      "city": "Mumbai",
+      "state": "MH",
+      "zip": "400053",
+      "phoneNumber": "9090909090",
+      "email": "[priya@gmail.com](mailto:priya@gmail.com)"
+    },
+    {
+      "id": "41a5",
+      "firstName": "Amit",
+      "lastName": "Sharma",
+      "address": "",
+      "city": "Mumbai",
+      "state": "MH",
+      "zip": "400001",
+      "phoneNumber": "7777777777",
+      "email": "amit@gmail.com"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
