@@ -1,4 +1,3 @@
-
 package com.addressbook.entity;
 
 import java.util.Objects;
