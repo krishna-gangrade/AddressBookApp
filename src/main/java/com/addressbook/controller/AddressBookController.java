@@ -103,4 +103,10 @@ public class AddressBookController {
 
         return service.countContactsByState();
     }
+    
+    @GetMapping("/{bookName}/sort/name")
+    public List<Contact> sortByName(@PathVariable String bookName) {
+
+        return service.sortContactsByName(bookName);
+    }
 }
