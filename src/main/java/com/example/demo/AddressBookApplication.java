@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AddressBookMain {
+public class AddressBookApplication {
 
-    public static void main(String[] args) {
-    	System.out.println("Welcome to Address Book Program");
-    }
+	public static void main(String[] args) {
+		System.out.println("Welcome to Address Book Program");
+	}
 
 }
