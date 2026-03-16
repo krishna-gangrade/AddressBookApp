@@ -1,25 +1,20 @@
-
 package com.addressbook.entity;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Getter
+@NoArgsConstructor
 public class AddressBook {
 
     private String name;
-    private List<Contact> contacts;
+    private List<Contact> contacts = new ArrayList<>();
 
     public AddressBook(String name) {
         this.name = name;
-        this.contacts = new ArrayList<>();
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public List<Contact> getContacts() {
-        return contacts;
     }
 
     public void addContact(Contact contact) {

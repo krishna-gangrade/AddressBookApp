@@ -12,29 +12,7 @@
       "id": "1"
     },
     {
-      "id": "3",
-      "firstName": "Sneha",
-      "lastName": "Patel",
-      "address": "Satellite Road",
-      "city": "Ahmedabad",
-      "state": "GJ",
-      "zip": "380015",
-      "phoneNumber": "9012345678",
-      "email": "[sneha@gmail.com](mailto:sneha@gmail.com)"
-    },
-    {
-      "id": "4",
-      "firstName": "Priya",
-      "lastName": "Singh",
-      "address": "Andheri West",
-      "city": "Mumbai",
-      "state": "MH",
-      "zip": "400053",
-      "phoneNumber": "9090909090",
-      "email": "[priya@gmail.com](mailto:priya@gmail.com)"
-    },
-    {
-      "id": "41a5",
+      "id": "d7f6",
       "firstName": "Amit",
       "lastName": "Sharma",
       "address": "",
@@ -45,7 +23,7 @@
       "email": "amit@gmail.com"
     },
     {
-      "id": "1bcd",
+      "id": "2ba6",
       "firstName": "Amit",
       "lastName": "Sharma",
       "address": "",
@@ -56,7 +34,7 @@
       "email": "amit@gmail.com"
     },
     {
-      "id": "67e8",
+      "id": "3807",
       "firstName": "Amit",
       "lastName": "Sharma",
       "address": "",
@@ -67,7 +45,7 @@
       "email": "amit@gmail.com"
     },
     {
-      "id": "645a",
+      "id": "ed67",
       "firstName": "Amit",
       "lastName": "Sharma",
       "address": "",
@@ -76,6 +54,193 @@
       "zip": "400001",
       "phoneNumber": "7777777777",
       "email": "amit@gmail.com"
+    },
+    {
+      "id": "d4ea",
+      "firstName": "Amit",
+      "lastName": "Sharma",
+      "address": "",
+      "city": "Mumbai",
+      "state": "MH",
+      "zip": "400001",
+      "phoneNumber": "7777777777",
+      "email": "amit@gmail.com"
+    },
+    {
+      "id": "e4df",
+      "firstName": "Amit",
+      "lastName": "Sharma",
+      "address": "",
+      "city": "Mumbai",
+      "state": "MH",
+      "zip": "400001",
+      "phoneNumber": "7777777777",
+      "email": "amit@gmail.com"
+    },
+    {
+      "id": "e8df",
+      "firstName": "Amit",
+      "lastName": "Sharma",
+      "address": "",
+      "city": "Mumbai",
+      "state": "MH",
+      "zip": "400001",
+      "phoneNumber": "7777777777",
+      "email": "amit@gmail.com"
+    },
+    {
+      "id": "75db",
+      "firstName": "Amit",
+      "lastName": "Sharma",
+      "address": "",
+      "city": "Mumbai",
+      "state": "MH",
+      "zip": "400001",
+      "phoneNumber": "7777777777",
+      "email": "amit@gmail.com"
+    },
+    {
+      "id": "c5d1",
+      "firstName": "Amit",
+      "lastName": "Sharma",
+      "address": "",
+      "city": "Mumbai",
+      "state": "MH",
+      "zip": "400001",
+      "phoneNumber": "7777777777",
+      "email": "amit@gmail.com"
+    },
+    {
+      "id": "b321",
+      "firstName": "Amit",
+      "lastName": "Sharma",
+      "address": "",
+      "city": "Mumbai",
+      "state": "MH",
+      "zip": "400001",
+      "phoneNumber": "7777777777",
+      "email": "amit@gmail.com"
+    },
+    {
+      "id": "5ef4",
+      "firstName": "Amit",
+      "lastName": "Sharma",
+      "address": "",
+      "city": "Mumbai",
+      "state": "MH",
+      "zip": "400001",
+      "phoneNumber": "7777777777",
+      "email": "amit@gmail.com"
+    },
+    {
+      "id": "9b9a",
+      "firstName": "Amit",
+      "lastName": "Sharma",
+      "address": "",
+      "city": "Mumbai",
+      "state": "MH",
+      "zip": "400001",
+      "phoneNumber": "7777777777",
+      "email": "amit@gmail.com"
+    },
+    {
+      "firstName": "Updated",
+      "lastName": "User",
+      "address": "",
+      "city": "Mumbai",
+      "state": "MH",
+      "zip": "411001",
+      "phoneNumber": "9999999999",
+      "email": "updated@gmail.com",
+      "id": "1360"
+    },
+    {
+      "id": "1399",
+      "firstName": "Amit",
+      "lastName": "Sharma",
+      "address": "",
+      "city": "Mumbai",
+      "state": "MH",
+      "zip": "400001",
+      "phoneNumber": "7777777777",
+      "email": "amit@gmail.com"
+    },
+    {
+      "firstName": "Updated",
+      "lastName": "User",
+      "address": "",
+      "city": "Mumbai",
+      "state": "MH",
+      "zip": "411001",
+      "phoneNumber": "9999999999",
+      "email": "updated@gmail.com",
+      "id": "30bf"
+    },
+    {
+      "id": "835d",
+      "firstName": "Amit",
+      "lastName": "Sharma",
+      "address": "",
+      "city": "Mumbai",
+      "state": "MH",
+      "zip": "400001",
+      "phoneNumber": "7777777777",
+      "email": "amit@gmail.com"
+    },
+    {
+      "firstName": "Updated",
+      "lastName": "User",
+      "address": "",
+      "city": "Mumbai",
+      "state": "MH",
+      "zip": "411001",
+      "phoneNumber": "9999999999",
+      "email": "updated@gmail.com",
+      "id": "03e7"
+    },
+    {
+      "id": "be82",
+      "firstName": "Amit",
+      "lastName": "Sharma",
+      "address": "",
+      "city": "Mumbai",
+      "state": "MH",
+      "zip": "400001",
+      "phoneNumber": "7777777777",
+      "email": "amit@gmail.com"
+    },
+    {
+      "firstName": "Updated",
+      "lastName": "User",
+      "address": "",
+      "city": "Mumbai",
+      "state": "MH",
+      "zip": "411001",
+      "phoneNumber": "9999999999",
+      "email": "updated@gmail.com",
+      "id": "ebe2"
+    },
+    {
+      "id": "d221",
+      "firstName": "Amit",
+      "lastName": "Sharma",
+      "address": "",
+      "city": "Mumbai",
+      "state": "MH",
+      "zip": "400001",
+      "phoneNumber": "7777777777",
+      "email": "amit@gmail.com"
+    },
+    {
+      "firstName": "Updated",
+      "lastName": "User",
+      "address": "",
+      "city": "Mumbai",
+      "state": "MH",
+      "zip": "411001",
+      "phoneNumber": "9999999999",
+      "email": "updated@gmail.com",
+      "id": "5631"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -1,4 +1,3 @@
-
 package com.addressbook;
 
 import org.springframework.boot.SpringApplication;

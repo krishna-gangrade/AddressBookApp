@@ -24,7 +24,7 @@ public class ContactRepository {
 
         List<Contact> contacts = new ArrayList<>();
 
-        String sql = "SELECT first_name, last_name, city, state, zip, phone, email FROM contacts";
+        String sql = "SELECT first_name, last_name, address, city, state, zip, phone, email FROM contacts";
 
         try (
                 Connection connection = dataSource.getConnection();
@@ -37,7 +37,7 @@ public class ContactRepository {
                 Contact contact = new Contact(
                         resultSet.getString("first_name"),
                         resultSet.getString("last_name"),
-                        "",
+                        resultSet.getString("address"),
                         resultSet.getString("city"),
                         resultSet.getString("state"),
                         resultSet.getString("zip"),
@@ -94,7 +94,7 @@ public class ContactRepository {
                 Contact contact = new Contact(
                         rs.getString("first_name"),
                         rs.getString("last_name"),
-                        "",
+                        rs.getString("address"),
                         rs.getString("city"),
                         rs.getString("state"),
                         rs.getString("zip"),

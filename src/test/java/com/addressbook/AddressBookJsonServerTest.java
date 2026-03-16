@@ -1,109 +1,131 @@
+
 package com.addressbook;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class AddressBookJsonServerTest {
 
-	/*
-	 * IMPORTANT: Start JSON Server before running this test.
-	 *
-	 * This test retrieves contacts from a mock REST API provided by json-server.
-	 * The server must be running on port 3000 with the db.json file.
-	 *
-	 * Command to start JSON Server:
-	 *
-	 * json-server --watch src/test/resources/testdata/db.json --port 3000
-	 *
-	 * After starting the server, verify it using:
-	 * curl http://localhost:3000/contacts
-	 *
-	 * Expected: JSON response containing contact records.
-	 */
-	
-    @Test
-    public void givenJSONServer_whenContactsFetched_shouldReturnRecords() {
+	@BeforeAll
+	static void setup() {
+		RestAssured.baseURI = "http://localhost:3000";
+	}
 
-        Response response = RestAssured.get("http://localhost:3000/contacts");
+	@Test
+	public void givenJSONServer_whenContactsFetched_shouldReturnRecords() {
 
-        assertNotNull(response);
-        assertEquals(200, response.getStatusCode());
+		Response response = RestAssured.get("/contacts");
 
-        //System.out.println(response.getBody().asPrettyString());
-    }
-    
-    @Test
-    public void givenNewContact_whenAddedToJsonServer_shouldReturnCreated() {
+		assertNotNull(response);
+		assertEquals(200, response.getStatusCode());
 
+		System.out.println(response.getBody().asPrettyString());
+	}
+
+	@Test
+	public void givenNewContact_whenAddedToJsonServer_shouldReturnCreated() {
+
+		String newContact = """
+				{
+				  "firstName": "Amit",
+				  "lastName": "Sharma",
+				  "address": "",
+				  "city": "Mumbai",
+				  "state": "MH",
+				  "zip": "400001",
+				  "phoneNumber": "7777777777",
+				  "email": "amit@gmail.com"
+				}
+				""";
+
+		Response response = RestAssured.given().contentType("application/json").body(newContact).when()
+				.post("/contacts");
+
+		assertEquals(201, response.getStatusCode());
+
+		System.out.println(response.getBody().asPrettyString());
+	}
+
+	@Test
+	public void givenExistingContact_whenUpdated_shouldReturnSuccess() {
+
+		// First create a contact
+		String newContact = """
+				{
+				  "firstName": "Temp",
+				  "lastName": "User",
+				  "address": "",
+				  "city": "Delhi",
+				  "state": "DL",
+				  "zip": "110001",
+				  "phoneNumber": "8888888888",
+				  "email": "temp@gmail.com"
+				}
+				""";
+
+		Response createResponse = RestAssured.given().contentType("application/json").body(newContact)
+				.post("/contacts");
+
+		String id = createResponse.jsonPath().getString("id");
+
+		// Update the created contact
+		String updatedContact = """
+				{
+				  "firstName": "Updated",
+				  "lastName": "User",
+				  "address": "",
+				  "city": "Mumbai",
+				  "state": "MH",
+				  "zip": "411001",
+				  "phoneNumber": "9999999999",
+				  "email": "updated@gmail.com"
+				}
+				""";
+
+		Response updateResponse = RestAssured.given().contentType("application/json").body(updatedContact)
+				.put("/contacts/" + id);
+
+		assertEquals(200, updateResponse.getStatusCode());
+	}
+
+	@Test
+    public void givenExistingContact_whenDeleted_shouldReturnSuccess() {
+
+        // First create a contact
         String newContact = """
             {
-              "firstName": "Amit",
-              "lastName": "Sharma",
+              "firstName": "Delete",
+              "lastName": "User",
               "address": "",
-              "city": "Mumbai",
+              "city": "Pune",
               "state": "MH",
-              "zip": "400001",
-              "phoneNumber": "7777777777",
-              "email": "amit@gmail.com"
+              "zip": "411001",
+              "phoneNumber": "9999999999",
+              "email": "delete@gmail.com"
             }
             """;
 
-        Response response =
+        Response createResponse =
                 RestAssured
                         .given()
                         .contentType("application/json")
                         .body(newContact)
-                        .when()
-                        .post("http://localhost:3000/contacts");
+                        .post("/contacts");
 
-        assertEquals(201, response.getStatusCode());
+        String id = createResponse.jsonPath().getString("id");
 
-        //System.out.println(response.getBody().asPrettyString());
-    }
-    
-    @Test
-    public void givenExistingContact_whenUpdated_shouldReturnSuccess() {
-
-        String updatedContact = """
-            {
-              "firstName": "Tarus",
-              "lastName": "Prabhat",
-              "address": "",
-              "city": "Mumbai",
-              "state": "MH",
-              "zip": "411001",
-              "phoneNumber": "9999999999",
-              "email": "tp@gmail.com"
-            }
-            """;
-
-        Response response =
+        // Delete the created contact
+        Response deleteResponse =
                 RestAssured
                         .given()
-                        .contentType("application/json")
-                        .body(updatedContact)
-                        .when()
-                        .put("http://localhost:3000/contacts/1");
+                        .delete("/contacts/" + id);
 
-        assertEquals(200, response.getStatusCode());
+        assertEquals(200, deleteResponse.getStatusCode());
 
-        //System.out.println(response.getBody().asPrettyString());
-    }
-    
-    @Test
-    public void givenExistingContact_whenDeleted_shouldReturnSuccess() {
-
-        Response response =
-                RestAssured
-                        .given()
-                        .when()
-                        .delete("http://localhost:3000/contacts/2");
-
-        assertEquals(200, response.getStatusCode());
-
-        System.out.println("Contact deleted successfully");
+        System.out.println("Contact deleted successfully with id: " + id);
     }
 }
